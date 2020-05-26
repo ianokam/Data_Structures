@@ -39,7 +39,7 @@
 //		methods :
 //
 //			a) Preorder  (Root, Left, Right) 
-//			b) Inorder	 (Left, Root, Right)
+//			b) Inorder   (Left, Root, Right)
 //			c) Postorder (Left, Right, Root)
 //
 /*///////////////////////////////////////////////////////////////////////////*/
@@ -55,7 +55,7 @@
 using namespace std;
 
 //--------------------------------------------
-// User-Defined                            :
+// User-Defined                              :
 // Libraries                                 :
 //--------------------------------------------
 #include "binary_search_tree_ADT.h"
@@ -69,38 +69,38 @@ using namespace std;
 // Start Application     :
 //------------------------
 int main( ) {
-    //---------------------------------------------------------------------
-    // Binary Search Tree (BST) Declarations                              :
-    //---------------------------------------------------------------------
-    binaryTreeType< int > binary_search_tree;
-    //---------------------------------------------------------------------
-    // Variable Declarations                                              :
-    //---------------------------------------------------------------------
-    const int	  MAX_NUM_OF_VALS = 10;	// number of BST Values To Read In
+	//---------------------------------------------------------------------
+	// Binary Search Tree (BST) Declarations                              :
+	//---------------------------------------------------------------------
+	binaryTreeType< int > binary_search_tree;
+	//---------------------------------------------------------------------
+	// Variable Declarations                                              :
+	//---------------------------------------------------------------------
+	const int MAX_NUM_OF_VALS = 10;	// number of BST Values To Read In
 
-	int			  integer_val = -1;	// Buffer For Each Value To Insert Into
-									// The BST
+	int	integer_val = -1;	// Buffer For Each Value To Insert Into
+					// The BST
 
-	int			  counter;			// While-Loop Flag
-    
+	int	counter;		// While-Loop Flag
+
 
 	//---------------------------------------------------------------------
-    // PROGRAM DESCRIPTION												  :
+	// PROGRAM DESCRIPTION						      :
 	//---------------------------------------------------------------------
-    cout << "------------------------------------------------------------------------------" << endl;
-    cout << "  BINARY SEARCH TREE  -  PROGRAM DESCRIPTION                                 :" << endl;
-    cout << "------------------------------------------------------------------------------" << endl;
-	cout << "  The program asks the user to input 10 values into a binary search tree."		 << endl; 
-	cout << "  It outputs the binary search tree values Using The Algorithms:"				 << endl;
-    cout << "  Preorder, Inorder, Postorder"												 << endl;
-    
+	cout << "------------------------------------------------------------------------------" << endl;
+	cout << "  BINARY SEARCH TREE  -  PROGRAM DESCRIPTION                                 :" << endl;
+	cout << "------------------------------------------------------------------------------" << endl;
+	cout << "  The program asks the user to input 10 values into a binary search tree."	 << endl; 
+	cout << "  It outputs the binary search tree values Using The Algorithms:"		 << endl;
+	cout << "  Preorder, Inorder, Postorder"												 << endl;
+
 
 	//---------------------------------------------------------------------
-	// READ INTEGER VALUES INTO THE BST				            		  :
+	// READ INTEGER VALUES INTO THE BST				      :
 	//---------------------------------------------------------------------
 	// While-Loop Flag Initialization:
 	counter = 0;
-	
+
 
 	// Program Output Divider:
 	cout << endl << endl;
@@ -112,56 +112,56 @@ int main( ) {
 
 
 	// Exception Handler - Check That The User Inputs The Correct Values:
-    while( counter < MAX_NUM_OF_VALS )
-    {
+	while( counter < MAX_NUM_OF_VALS )
+	{
 		cout << "  #"; 
 		if (counter + 1 < MAX_NUM_OF_VALS) {
 			cout << "0";
 		}
 		cout << counter + 1 << " --- ENTER THE NUMBER YOU WANT TO READ IN:   ";
-       
-    
-        try{
-  
-            // Check If The Value Entered Is 
-            // The Correct Data Type:
-            if(  !(cin >> integer_val)  )
-            {
-                // Clear Input Buffer Stream:
-                cin.clear();
-                
+
+
+	try{
+
+	    // Check If The Value Entered Is 
+	    // The Correct Data Type:
+	    if(  !(cin >> integer_val)  )
+	    {
+		// Clear Input Buffer Stream:
+		cin.clear();
+
 				// If An Error Is Found, Don't Incrementing:
 				counter = counter;
 
-                // PERSONALIZED STATEMENT OF ERROR:
-                throw runtime_error("Invalid Data Type.");
-            }
-            
+		// PERSONALIZED STATEMENT OF ERROR:
+		throw runtime_error("Invalid Data Type.");
+	    }
+
 
 			// BST INSERTION CODE:
 			binary_search_tree.insert( integer_val );
 
 
-            // If All Checks Have Been Passed, Allow The Code To Continue Past The While-Loop:
+	    // If All Checks Have Been Passed, Allow The Code To Continue Past The While-Loop:
 			counter++;
-        }
-        catch( runtime_error& excpt )
-        {
-            
-            // Prints The Error Message Passed By The Throw Statement:
-            cout << endl;
-            cout << "----------" << endl << endl;
-            cout << "  ERROR:  " << excpt.what() << endl << endl;
-            cout << "----------" << endl << endl << endl;
-        }
-    
-    }// END OF TRY-CATCH WHILE-LOOP ( 'Exception Handler - Check That The User Inputs THe Correct Values" )
+	}
+	catch( runtime_error& excpt )
+	{
 
-	
+	    // Prints The Error Message Passed By The Throw Statement:
+	    cout << endl;
+	    cout << "----------" << endl << endl;
+	    cout << "  ERROR:  " << excpt.what() << endl << endl;
+	    cout << "----------" << endl << endl << endl;
+	}
+
+	}// END OF TRY-CATCH WHILE-LOOP ( 'Exception Handler - Check That The User Inputs THe Correct Values" )
+
+
 
 	//---------------------------------------------------------------------
-    // OUTPUT THE BST VALUES					        		          :
-    // USING THE PREORDER ALGORITHM    					    			  :
+	// OUTPUT THE BST VALUES					      :
+	// USING THE PREORDER ALGORITHM    				      :
 	//---------------------------------------------------------------------
 	// Print Section Title:
 	cout << endl << endl;
@@ -175,8 +175,8 @@ int main( ) {
 
 
 	//---------------------------------------------------------------------
-	// OUTPUT THE BST VALUES					        		          :
-	// USING THE INORDER ALGORITHM    					    			  :
+	// OUTPUT THE BST VALUES					      :
+	// USING THE INORDER ALGORITHM    				      :
 	//---------------------------------------------------------------------
 	// Print Section Title:
 	cout << endl << endl;
@@ -190,8 +190,8 @@ int main( ) {
 
 
 	//---------------------------------------------------------------------
-	// OUTPUT THE BST VALUES					        		          :
-	// USING THE POSTORDER ALGORITHM    				    			  :
+	// OUTPUT THE BST VALUES					      :
+	// USING THE POSTORDER ALGORITHM    				      :
 	//---------------------------------------------------------------------
 	// Print Section Title:
 	cout << endl << endl;
@@ -203,24 +203,24 @@ int main( ) {
 	// Print BST:
 	binary_search_tree.postorder( );
 
-    
+
 	// Give Space At The End Of The Program:
 	cout << endl << endl << endl;
 
 
 
-    //---------------------------------------------------------------------
-    // System Specific Macro.                                             :
-    // Pause The System                                                   :
-    //---------------------------------------------------------------------
-    #if defined(_WIN32) || defined(_WIN64)
-        system("pause");
-    #endif
-    
+	//---------------------------------------------------------------------
+	// System Specific Macro.                                             :
+	// Pause The System                                                   :
+	//---------------------------------------------------------------------
+	#if defined(_WIN32) || defined(_WIN64)
+	system("pause");
+	#endif
 
-    //---------------------------------------------------------------------
-    // End Application                                                    :
-    //---------------------------------------------------------------------
+
+	//---------------------------------------------------------------------
+	// End Application                                                    :
+	//---------------------------------------------------------------------
 	return 0;
 
 }
