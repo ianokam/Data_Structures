@@ -12,8 +12,8 @@
 //  Revised by:         n/a
 //  Revision Date:      n/a
 //
-//  Copyright:          Copyright © 2020 Ibeawuchi Anokam. 
-//						All rights reserved.
+//  Copyright:          Copyright © 2020 Ibeawuchi Anokam.
+//                      All rights reserved.
 //
 //-------------------------------------------------
 // PROGRAM DESCRIPTION                            :
