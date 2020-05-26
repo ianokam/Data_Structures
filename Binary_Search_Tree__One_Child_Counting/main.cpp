@@ -51,37 +51,37 @@ using namespace std;
 // Start Application     :
 //------------------------
 int main( ) {
-    //---------------------------------------------------------------------
-    // Binary Search Tree (BST) Declarations                              :
-    //---------------------------------------------------------------------
-    binaryTreeType< int > binary_search_tree;
-    //---------------------------------------------------------------------
-    // Variable Declarations                                              :
-    //---------------------------------------------------------------------
-    const int	  MAX_NUM_OF_VALS = 10;	// number of BST Values To Read In
+	//---------------------------------------------------------------------
+	// Binary Search Tree (BST) Declarations                              :
+	//---------------------------------------------------------------------
+	binaryTreeType< int > binary_search_tree;
+	//---------------------------------------------------------------------
+	// Variable Declarations                                              :
+	//---------------------------------------------------------------------
+	const int	  MAX_NUM_OF_VALS = 10;	// number of BST Values To Read In
 
-	int			  integer_val = -1;		// Buffer For Each Value To Insert Into
-										// The BST
+	int integer_val = -1;		// Buffer For Each Value To Insert Into
+			// The BST
 
-	int			  counter;				// While-Loop Flag
-    
+	int counter;			// While-Loop Flag
+
 
 	//---------------------------------------------------------------------
-    // PROGRAM DESCRIPTION												  :
+	// PROGRAM DESCRIPTION						      :
 	//---------------------------------------------------------------------
-    cout << "------------------------------------------------------------------------------" << endl;
-    cout << "  BINARY SEARCH TREE  -  PROGRAM DESCRIPTION                                 :" << endl;
-    cout << "------------------------------------------------------------------------------" << endl;
-	cout << "  The program asks the user to input 10 values into a binary search tree."		 << endl; 
-	cout << "  It outputs the count of parent nodes with one child."        			 	 << endl;
-    
+	cout << "------------------------------------------------------------------------------" << endl;
+	cout << "  BINARY SEARCH TREE  -  PROGRAM DESCRIPTION                                 :" << endl;
+	cout << "------------------------------------------------------------------------------" << endl;
+	cout << "  The program asks the user to input 10 values into a binary search tree."  << endl; 
+	cout << "  It outputs the count of parent nodes with one child."        	     << endl;
+
 
 	//---------------------------------------------------------------------
-	// READ INTEGER VALUES INTO THE BST				            		  :
+	// READ INTEGER VALUES INTO THE BST				      :
 	//---------------------------------------------------------------------
 	// While-Loop Flag Initialization:
 	counter = 0;
-	
+
 
 	// Program Output Divider:
 	cout << endl << endl;
@@ -93,55 +93,55 @@ int main( ) {
 
 
 	// Exception Handler - Check That The User Inputs The Correct Values:
-    while( counter < MAX_NUM_OF_VALS )
-    {
+	while( counter < MAX_NUM_OF_VALS )
+	{
 		cout << "  #"; 
 		if (counter + 1 < 10) {
 			cout << "0";
 		}
 		cout << counter + 1 << " --- ENTER THE NUMBER YOU WANT TO READ IN:   ";
-       
-    
-        try{
-  
-            // Check If The Value Entered Is 
-            // The Correct Data Type:
-            if(  !(cin >> integer_val)  )
-            {
-                // Clear Input Buffer Stream:
-                cin.clear();
-                
-				// If An Error Is Found, Don't Incrementing:
-				counter = counter;
-
-                // PERSONALIZED STATEMENT OF ERROR:
-                throw runtime_error("Invalid Data Type.");
-            }
-            
-
-			// BST INSERTION CODE:
-			binary_search_tree.insert( integer_val );
 
 
-            // If All Checks Have Been Passed, Allow The Code To Continue Past The While-Loop:
-			counter++;
-        }
-        catch( runtime_error& excpt )
-        {
-            
-            // Prints The Error Message Passed By The Throw Statement:
-            cout << endl;
-            cout << "----------" << endl << endl;
-            cout << "  ERROR:  " << excpt.what() << endl << endl;
-            cout << "----------" << endl << endl << endl;
-        }
-    
-    }// END OF TRY-CATCH WHILE-LOOP ( 'Exception Handler - Check That The User Inputs THe Correct Values" )
+	try{
+
+	    // Check If The Value Entered Is 
+	    // The Correct Data Type:
+	    if(  !(cin >> integer_val)  )
+	    {
+		// Clear Input Buffer Stream:
+		cin.clear();
+
+		// If An Error Is Found, Don't Incrementing:
+		counter = counter;
+
+		// PERSONALIZED STATEMENT OF ERROR:
+		throw runtime_error("Invalid Data Type.");
+	    }
+
+
+		// BST INSERTION CODE:
+		binary_search_tree.insert( integer_val );
+
+
+	    	// If All Checks Have Been Passed, Allow The Code To Continue Past The While-Loop:
+		counter++;
+	}
+	catch( runtime_error& excpt )
+	{
+
+	    // Prints The Error Message Passed By The Throw Statement:
+	    cout << endl;
+	    cout << "----------" << endl << endl;
+	    cout << "  ERROR:  " << excpt.what() << endl << endl;
+	    cout << "----------" << endl << endl << endl;
+	}
+
+	}// END OF TRY-CATCH WHILE-LOOP ( 'Exception Handler - Check That The User Inputs THe Correct Values" )
 
 	
 
 	//---------------------------------------------------------------------
-	// OUTPUT THE COUNT OF NODES WITH ONE CHILD					          :
+	// OUTPUT THE COUNT OF NODES WITH ONE CHILD			      :
 	//---------------------------------------------------------------------
 	// Print Section Title:
 	cout << endl << endl;
@@ -152,7 +152,7 @@ int main( ) {
 
 	// Output:
 	cout << "The Number Of Nodes With One Child Is:   " 
-		 << binary_search_tree.singleParent( );
+	     << binary_search_tree.singleParent( );
 
     
 	// Give Space At The End Of The Program:
@@ -160,18 +160,18 @@ int main( ) {
 
 
 
-    //---------------------------------------------------------------------
-    // System Specific Macro.                                             :
-    // Pause The System                                                   :
-    //---------------------------------------------------------------------
-    #if defined(_WIN32) || defined(_WIN64)
-        system("pause");
-    #endif
-    
+	//---------------------------------------------------------------------
+	// System Specific Macro.                                             :
+	// Pause The System                                                   :
+	//---------------------------------------------------------------------
+	#if defined(_WIN32) || defined(_WIN64)
+	system("pause");
+	#endif
 
-    //---------------------------------------------------------------------
-    // End Application                                                    :
-    //---------------------------------------------------------------------
+
+	//---------------------------------------------------------------------
+	// End Application                                                    :
+	//---------------------------------------------------------------------
 	return 0;
 
 }
